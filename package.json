@@ -1,0 +1,29 @@
+{
+  "name": "proctor-exam-management",
+  "version": "1.0.0",
+  "description": "Classroom & online examination management system with live exam control",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "reseed": "node -e \"require('fs').rmSync('data',{recursive:true,force:true})\" && node server/seed.js",
+    "test": "node tests/api-flow.test.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "better-sqlite3": "^13.0.3",
+    "cookie-parser": "^1.4.7",
+    "exceljs": "^4.4.0",
+    "express": "^5.2.1",
+    "express-rate-limit": "^8.7.0",
+    "helmet": "^8.3.0",
+    "multer": "^2.4.0",
+    "pdfkit": "^0.20.2",
+    "ws": "^8.21.3"
+  },
+  "private": true,
+  "engines": {
+    "node": ">=20"
+  }
+}
